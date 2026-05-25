@@ -1,0 +1,8 @@
+pandas>=2.0.0
+numpy>=1.24.0
+scikit-learn>=1.2.0
+xgboost>=1.7.0
+sagemaker
+boto3>=1.28.0
+pyyaml>=6.0
+fairlearn

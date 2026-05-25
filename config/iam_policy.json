@@ -1,0 +1,43 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "S3BucketAccess",
+            "Effect": "Allow",
+            "Action": [
+                "s3:GetObject",
+                "s3:PutObject",
+                "s3:ListBucket",
+                "s3:DeleteObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::enterprise-student-math-sagemaker-2026",
+                "arn:aws:s3:::enterprise-student-math-sagemaker-2026/*"
+            ]
+        },
+        {
+            "Sid": "SageMakerExecutionAccess",
+            "Effect": "Allow",
+            "Action": [
+                "sagemaker:CreateProcessingJob",
+                "sagemaker:CreateTrainingJob",
+                "sagemaker:CreateModel",
+                "sagemaker:RegisterModel",
+                "sagemaker:DescribeProcessingJob",
+                "sagemaker:DescribeTrainingJob"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "LoggingAndMetricsAccess",
+            "Effect": "Allow",
+            "Action": [
+                "logs:CreateLogGroup",
+                "logs:CreateLogStream",
+                "logs:PutLogEvents",
+                "cloudwatch:PutMetricData"
+            ],
+            "Resource": "*"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "fairness_metrics": {
+        "sensitive_attribute": "gender",
+        "mae_by_group": {
+            "female": 4.556429243579354,
+            "male": 4.218874292466247
+        },
+        "mae_difference_threshold_passed": true,
+        "absolute_difference": 0.3375549511131064
+    }
+}

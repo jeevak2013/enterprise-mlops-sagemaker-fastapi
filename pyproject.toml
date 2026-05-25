@@ -1,0 +1,26 @@
+[project]
+name = "student-math-score-sagemaker"
+version = "1.0.0"
+description = "Enterprise-Grade End-to-End MLOps Pipeline using AWS SageMaker"
+requires-python = ">=3.10"
+dependencies = [
+    "sagemaker>=2.190.0",
+    "boto3>=1.28.0",
+    "pyyaml>=6.0",
+    "pandas>=2.0.0",
+    "numpy>=1.24.0",
+    "scikit-learn>=1.2.0",
+    "xgboost>=1.7.0",
+    "great-expectations>=0.17.0",
+    "fastapi>=0.100.0",
+    "uvicorn>=0.22.0"
+]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-ra -q"
+testpaths = ["tests"]
+
+[tool.black]
+line-length = 88
+target-version = ['py310']

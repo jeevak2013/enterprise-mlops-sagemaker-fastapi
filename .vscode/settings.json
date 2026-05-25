@@ -1,0 +1,8 @@
+{
+    "python.defaultInterpreterPath": "${workspaceFolder}/.venv/Scripts/python.exe",
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}/src"
+    ],
+    "python.analysis.typeCheckingMode": "off", // 🌟 'basic' என்பதில் இருந்து 'off' என மாற்றப்பட்டுள்ளது
+    "python.analysis.useLibraryCodeForTypes": true
+}

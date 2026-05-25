@@ -1,0 +1,24 @@
+aws_infrastructure:
+  region: "us-east-1"
+  s3_bucket_name: "enterprise-student-math-sagemaker-2026"
+  kms_key_alias: "alias/sagemaker-storage-encryption-key"
+
+sagemaker_pipeline:
+  name: "EnterpriseStudentMathPipeline"
+  model_group: "StudentMathScoreRegistryGroup"
+  
+  instances:
+    processing: "ml.t3.medium"
+    training: "ml.m5.xlarge"
+    evaluation: "ml.t3.medium"
+
+model_validation:
+  metrics:
+    min_r2_score: 0.75
+    max_rmse: 15.0
+
+data_quality_rules:
+  min_row_count: 100
+  score_range:
+    min: 0
+    max: 100
